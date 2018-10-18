@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>SINO - Data Cleaning</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+        <script src="./dependencies/papaparse.min.js"></script>
+        <script src="./dependencies/helpers.js"></script>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <input type="radio" name="csv" value="train"> Train<br>
+        <input type="radio" name="csv" value="stores"> Stores<br>
+        <input type="radio" name="csv" value="features"> Features<br>
+        <input type="file" id="csv-input" name="files"/>
+        <script>
+            $(document).ready(function(){
+                $("#csv-input").change((evt) => {
+                    let radios = document.getElementsByName('csv');
+                    for (let i = 0, length = radios.length; i < length; i++) {
+                        if (radios[i].checked) {
+                            handle(evt, radios[i].value);
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
