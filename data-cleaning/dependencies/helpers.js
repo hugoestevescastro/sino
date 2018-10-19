@@ -22,10 +22,10 @@ function parseDate(value) {
         return "invalid";
     }
 }
-function getCSV(data, name) {
+function getCSV(data, name, titleRow) {
     // Follow the given structure
     // data = [ [...,...], [...,...], ...]
-    let csv = 'Store,Dept,Date,WeeklySales,isHolyday\n';
+    let csv = titleRow;
     data.forEach((row) => {
         csv += row.join(',');
         csv += "\n";
