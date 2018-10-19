@@ -1,6 +1,7 @@
-function parseNumber(value) {
+function parseNumber(value, field) {
     let parsed = Number(value);
     if (isNaN(parsed)) {
+        console.log(field+" == invalid");
         return "invalid";
     } else {
         return parsed;
@@ -11,6 +12,7 @@ function checkHoliday(value) {
         return value;
     }
     else {
+        console.log("isHoliday == invalid");
         return "invalid";
     }
 }
@@ -19,6 +21,7 @@ function parseDate(value) {
         return new Date(value);;
     }
     catch(exception) {
+        console.log("date == invalid");
         return "invalid";
     }
 }

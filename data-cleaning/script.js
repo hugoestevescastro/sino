@@ -26,10 +26,10 @@ function cleanTrain(result) {
     let rows = [];
     for(let i = 0; i < data.length; i++) {
         let line = data[i],
-            store = parseNumber(line.Store),
-            dept = parseNumber(line.Dept),
+            store = parseNumber(line.Store, "store"),
+            dept = parseNumber(line.Dept, "dept"),
             date = parseDate(line.Date),
-            weekSales = parseNumber(line.Weekly_Sales),
+            weekSales = parseNumber(line.Weekly_Sales, "week_sales"),
             isHoliday = checkHoliday(line.IsHoliday);
         let row = [store, dept, date, weekSales, isHoliday];
         rows.push(row);
@@ -42,9 +42,9 @@ function cleanStores(result) {
     let rows = [];
     for(let i = 0; i < data.length; i++) {
         let line = data[i],
-            store = parseNumber(line.Store),
+            store = parseNumber(line.Store, "store"),
             type = line.Type,
-            size = parseNumber(line.Size);
+            size = parseNumber(line.Size, "size");
         let row = [store, type, size];
         rows.push(row);
     }
@@ -56,13 +56,13 @@ function cleanFeatures(result) {
     let rows = [];
     for(let i = 0; i < data.length; i++) {
         let line = data[i],
-            store = parseNumber(line.Store),
+            store = parseNumber(line.Store, "store"),
             date = parseDate(line.Date),
-            temperature = parseNumber(line.Temperature),
-            fuelPrice = parseNumber(line.Fuel_Price),
+            temperature = parseNumber(line.Temperature, "temperature"),
+            fuelPrice = parseNumber(line.Fuel_Price, "fuel_price"),
             //markdowns
-            cpi = parseNumber(line.CPI),
-            unemployment = parseNumber(line.Unemployment),
+            cpi = parseNumber(line.CPI, "cpi"),
+            unemployment = parseNumber(line.Unemployment, "unemp"),
             isHoliday = checkHoliday(line.IsHoliday);
         let row = [store, date, temperature, fuelPrice, cpi, unemployment, isHoliday];
         rows.push(row);
