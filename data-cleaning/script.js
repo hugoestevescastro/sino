@@ -6,15 +6,12 @@ function handle(evt, checked) {
         complete: function(results) {
             switch(checked){
                 case 'train':
-                    console.log("cleanTrains()");
                     cleanTrain(results);
                     break;
                 case 'stores':
-                    console.log("cleanStores()");
                     cleanStores(results);
                     break;
                 case 'features':
-                    console.log("cleanFeatures()");
                     cleanFeatures(results);
                     break;
             }
@@ -34,7 +31,7 @@ function cleanTrain(result) {
         let row = [store, dept, date, weekSales, isHoliday];
         rows.push(row);
     }
-    getCSV(rows, "trains", 'Store,Dept,Date,WeeklySales,isHolyday\n');
+    getCSV(rows, "trains", 'Store,Dept,Date,WeeklySales,isHoliday\n');
 }
 
 function cleanStores(result) {
@@ -66,6 +63,6 @@ function cleanFeatures(result) {
             isHoliday = checkHoliday(line.IsHoliday);
         let row = [store, date, temperature, fuelPrice, cpi, unemployment, isHoliday];
         rows.push(row);
-    }
+    }x§x1
     getCSV(rows, "features", 'Store,Date,Temperature,FuelPrice,CPI,Unemployment,isHoliday\n');
 }
