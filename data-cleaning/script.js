@@ -14,6 +14,9 @@ function handle(evt, checked) {
                 case 'features':
                     cleanFeatures(results);
                     break;
+                case 'test':
+                    cleanTest(results);
+                    break;
             }
         }
     });
@@ -63,6 +66,21 @@ function cleanFeatures(result) {
             isHoliday = checkHoliday(line.IsHoliday);
         let row = [store, date, temperature, fuelPrice, cpi, unemployment, isHoliday];
         rows.push(row);
-    }x§x1
+    }
     getCSV(rows, "features", 'Store,Date,Temperature,FuelPrice,CPI,Unemployment,isHoliday\n');
+}
+
+function cleanTest(result) {
+    let data = result.data;
+    let rows = [];
+    for(let i = 0; i < data.length; i++) {
+        let line = data[i],
+            store = parseNumber(line.Store, "store"),
+            dept = parseNumber(line.Dept, "dept"),
+            date = parseDate(line.Date),
+            isHoliday = checkHoliday(line.IsHoliday);
+        let row = [store, dept, date, isHoliday];
+        rows.push(row);
+    }
+    getCSV(rows, "test", 'Store,Dept,Date,isHoliday\n');
 }
