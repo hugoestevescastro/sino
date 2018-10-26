@@ -60,14 +60,19 @@ function cleanFeatures(result) {
             date = parseDate(line.Date),
             temperature = parseNumber(line.Temperature, "temperature"),
             fuelPrice = parseNumber(line.Fuel_Price, "fuel_price"),
-            //markdowns
+            md1 = parseMarkDown(line.MarkDown1),
+            md2 = parseMarkDown(line.MarkDown2),
+            md3 = parseMarkDown(line.MarkDown3),
+            md4 = parseMarkDown(line.MarkDown4),
+            md5 = parseMarkDown(line.MarkDown5),
             cpi = parseNumber(line.CPI, "cpi"),
             unemployment = parseNumber(line.Unemployment, "unemp"),
             isHoliday = checkHoliday(line.IsHoliday);
-        let row = [store, date, temperature, fuelPrice, cpi, unemployment, isHoliday];
+        console.log("Markdown1: " + line.MarkDown1 + " || " + typeof line.MarkDown1);
+        let row = [store, date, temperature, fuelPrice, md1, md2, md3, md4, md5, cpi, unemployment, isHoliday];
         rows.push(row);
     }
-    getCSV(rows, "features", 'Store,Date,Temperature,FuelPrice,CPI,Unemployment,isHoliday\n');
+    getCSV(rows, "features", 'Store,Date,Temperature,FuelPrice,Markdown1,Markdown2,Markdown3,Markdown4,Markdown5,CPI,Unemployment,isHoliday\n');
 }
 
 function cleanTest(result) {
