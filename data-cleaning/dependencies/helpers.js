@@ -16,7 +16,7 @@ function checkHoliday(value) {
 }
 function parseDate(value) {
     try {
-        return new Date(value);;
+        return new Date(value);
     }
     catch(exception) {
         return "invalid";
