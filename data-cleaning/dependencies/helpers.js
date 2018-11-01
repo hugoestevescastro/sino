@@ -1,7 +1,7 @@
 function parseNumber(value, field) {
     let parsed = Number(value);
     if (isNaN(parsed)) {
-        return "invalid";
+        return null;
     } else {
         return parsed;
     }
@@ -11,7 +11,7 @@ function checkHoliday(value) {
         return value;
     }
     else {
-        return "invalid";
+        return null;
     }
 }
 function parseDate(value) {
@@ -19,13 +19,13 @@ function parseDate(value) {
         return new Date(value);
     }
     catch(exception) {
-        return "invalid";
+        return "Invalid Date";
     }
 }
 function parseMarkDown(value) {
     let parsed = Number(value);
     if (isNaN(parsed)) {
-        return "invalid"
+        return null;
     }
     else {
         return parsed;
