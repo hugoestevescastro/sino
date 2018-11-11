@@ -70,7 +70,8 @@ function cleanFeatures(result) {
         nlines++;
         let line = data[i],
             store = parseNumber(line.Store, "store"),
-            date = parseDate(line.Date),
+            date = line.Date,
+            // date = parseDate(line.Date),
             temperature = parseNumber(line.Temperature, "temperature"),
             fuelPrice = parseNumber(line.Fuel_Price, "fuel_price"),
             md1 = parseMarkDown(line.MarkDown1),
