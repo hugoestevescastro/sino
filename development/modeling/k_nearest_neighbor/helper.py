@@ -16,7 +16,6 @@ def get_data(path):
         Data frame originated from *.csv.
 
     """
-    print("=> STARTING IMPORT. PLEASE WAIT...\n")
     return pd.read_csv(path)
 
 
@@ -79,21 +78,14 @@ def draw_3d_scatter_plot(df, x_lbl, y_lbl, z_lbl, color='r', marker='.'):
     plt.show()
 
 
-def calculate_distance_between_points(a, b):
-    """Calculate the distance between two points
-
-    Args:
-        a: Array containing the first point coordinates
-        b: Array containing the second point coordinates
-
+def euclidean_distance(row, distance_columns, selected_week):
     """
-    # Ensures that the points must have 2 or 3 dimensions
-    if len(a) != len(b):
-        exit()
-    if len(a) != 2:
-        exit()
-
-    return math.sqrt((b[0]-a[0])**2 + (b[1]-a[1])**2)
+    A simple euclidean distance function
+    """
+    inner_value = 0
+    for k in distance_columns:
+        inner_value += (row[k] - selected_week[k]) ** 2
+    return math.sqrt(inner_value)
 
 
 def get_points(df, x, y):
