@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72bde3ec-b6ab-49a2-ba28-72a6ce439dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/classification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training/classification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training/regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorythm.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/csv/output/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/output/predictions.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/output/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/regression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +21,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$merge.coverage" NAME="merge Coverage Results" MODIFIED="1541899666696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$algorythm__1_.coverage" NAME="algorythm (1) Coverage Results" MODIFIED="1541977844771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_nearest_neighbor$Classification.coverage" NAME="Classification Coverage Results" MODIFIED="1542732395463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_nearest_neighbor$Train___Classification.coverage" NAME="Train - Classification Coverage Results" MODIFIED="1542733148215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_nearest_neighbor$Regression.coverage" NAME="Regression Coverage Results" MODIFIED="1542732297104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_nearest_neighbor$algorythm.coverage" NAME="algorythm Coverage Results" MODIFIED="1542244613059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_nearest_neighbor$Train___Regression.coverage" NAME="Train - Regression Coverage Results" MODIFIED="1542733774482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$merge.coverage" NAME="merge Coverage Results" MODIFIED="1541899666696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neighbor$data_preparation.coverage" NAME="data_preparation Coverage Results" MODIFIED="1542243370272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$algorythm.coverage" NAME="algorythm Coverage Results" MODIFIED="1541901956365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$graph.coverage" NAME="graph Coverage Results" MODIFIED="1541902242417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$graph_example.coverage" NAME="graph_example Coverage Results" MODIFIED="1541974459694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neighbor$knn_tst.coverage" NAME="knn_tst Coverage Results" MODIFIED="1542128323495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/k_nearest_neighbor$algorythm.coverage" NAME="algorythm Coverage Results" MODIFIED="1542243843593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_nearest_neightbor_regression$merge__1_.coverage" NAME="merge (1) Coverage Results" MODIFIED="1541972119486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -64,48 +72,53 @@
     <session id="-1222822415">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="8" />
-          <entry key="py" value="17" />
+          <entry key="csv" value="31" />
+          <entry key="py" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="17" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="Python" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="14" />
-          <entry key="py" value="4569" />
+          <entry key="dummy" value="29" />
+          <entry key="py" value="7476" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="4569" />
+          <entry key="PLAIN_TEXT" value="29" />
+          <entry key="Python" value="7476" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="k_nearest_neighbor" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.5787546">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/regression.py">
+            <entry file="file://$PROJECT_DIR$/training/regression.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="388">
-                  <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
                   <folding>
                     <element signature="e#0#49#0" expanded="true" />
                   </folding>
@@ -118,10 +131,13 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/data.py">
+            <entry file="file://$PROJECT_DIR$/training/classification.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+                <state relative-caret-position="476">
+                  <caret line="28" selection-start-line="28" selection-end-line="31" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -159,9 +175,20 @@
         <option value="$PROJECT_DIR$/knn_tst.py" />
         <option value="$PROJECT_DIR$/algorythm.py" />
         <option value="$PROJECT_DIR$/algorythm.py" />
-        <option value="$PROJECT_DIR$/helper.py" />
         <option value="$PROJECT_DIR$/data_preparation.py" />
         <option value="$PROJECT_DIR$/regression.py" />
+        <option value="$PROJECT_DIR$/classification.py" />
+        <option value="$PROJECT_DIR$/train.classification.py" />
+        <option value="$PROJECT_DIR$/test.classification.py" />
+        <option value="$PROJECT_DIR$/helper.py" />
+        <option value="$PROJECT_DIR$/data.py" />
+        <option value="$PROJECT_DIR$/test.regression.py" />
+        <option value="$PROJECT_DIR$/testing/test.classification.py" />
+        <option value="$PROJECT_DIR$/testing/test.regression.py" />
+        <option value="$PROJECT_DIR$/training/classification.py" />
+        <option value="$PROJECT_DIR$/testing/regression.py" />
+        <option value="$PROJECT_DIR$/testing/classification.py" />
+        <option value="$PROJECT_DIR$/training/regression.py" />
       </list>
     </option>
   </component>
@@ -171,10 +198,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1501" />
+    <option name="width" value="840" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -185,6 +211,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="k_nearest_neighbor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k_nearest_neighbor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k_nearest_neighbor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k_nearest_neighbor" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k_nearest_neighbor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k_nearest_neighbor" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -201,17 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="k_nearest_neighbor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k_nearest_neighbor" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,11 +256,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/testing" />
+      <recent name="$PROJECT_DIR$/csv/input" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/csv/input" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,30 +276,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.algorythm">
-    <configuration name="algorythm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="k_nearest_neightbor" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regression.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="algorythm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Train - Regression">
+    <configuration name="Test - Classification" type="PythonConfigurationType" factoryName="Python">
       <module name="k_nearest_neighbor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,7 +290,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regression.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing/classification.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,20 +299,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_preparation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Test - Regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="k_nearest_neighbor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing/regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -306,42 +321,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="graph_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="k_nearest_neightbor" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graph_example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="knn_tst" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Train - Classification" type="PythonConfigurationType" factoryName="Python">
       <module name="k_nearest_neighbor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/knn_tst.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/training/classification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Train - Regression" type="PythonConfigurationType" factoryName="Python">
+      <module name="k_nearest_neighbor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/training/regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,19 +428,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.algorythm" />
-      <item itemvalue="Python.graph_example" />
-      <item itemvalue="Python.algorythm (1)" />
-      <item itemvalue="Python.data_preparation" />
-      <item itemvalue="Python.knn_tst" />
+      <item itemvalue="Python.Test - Classification" />
+      <item itemvalue="Python.Train - Classification" />
+      <item itemvalue="Python.Train - Regression" />
+      <item itemvalue="Python.Test - Regression" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.algorythm" />
-        <item itemvalue="Python.data_preparation" />
-        <item itemvalue="Python.knn_tst" />
-        <item itemvalue="Python.algorythm (1)" />
-        <item itemvalue="Python.graph_example" />
+        <item itemvalue="Python.Test - Regression" />
       </list>
     </recent_temporary>
   </component>
@@ -443,15 +453,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="23" width="1501" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20562029" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918434" weight="0.1953602" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008157" side_tool="true" weight="0.2138451" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34438503" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34438503" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,47 +499,109 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph_example.py" />
-    <entry file="file://$PROJECT_DIR$/knn_tst.py">
+    <entry file="file://$PROJECT_DIR$/knn_tst.py" />
+    <entry file="file://$PROJECT_DIR$/csv/output/predictions.csv" />
+    <entry file="file://$PROJECT_DIR$/csv/output/data.csv" />
+    <entry file="file://$PROJECT_DIR$/csv/input/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/input/stores.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-225">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/output/data.csv">
+    <entry file="file://$PROJECT_DIR$/csv/input/features.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/output/classification.data.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="238">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        <state relative-caret-position="-7682">
+          <caret line="1" column="38" lean-forward="true" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/csv/output/test.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/output/predictions.csv">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/csv/input/train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="572">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/output/regression.data.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="17">
+          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/output/regression.predictions.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1541">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="323">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <marker date="1542732272628" expanded="true" signature="1811:1812" ph="..." />
+            <marker date="1542732272628" expanded="true" signature="1811:1816" ph="..." />
+            <marker date="1542732272628" expanded="true" signature="2189:2387" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/regression.py">
+    <entry file="file://$PROJECT_DIR$/csv/output/classification.predictions.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="493">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="41" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training/regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>

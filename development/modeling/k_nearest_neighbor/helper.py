@@ -49,6 +49,18 @@ def calculate_week(dt_str):
     day = int(dt_str[8:])
     return datetime.date(year, month, day).isocalendar()[1]
 
+def calculate_year(dt_str):
+    """Calculates the date year.
+
+    Args:
+        dt_str: Date in a string. YYYY:MM:DD.
+
+    Returns:
+        The year of the given date
+
+    """
+    return dt_str[:4]
+
 
 def draw_3d_scatter_plot(df, x_lbl, y_lbl, z_lbl, color='r', marker='.'):
     """Draws a 3D scatter plot.
