@@ -1,34 +1,41 @@
 import data
 import helper as h
 from sklearn.neighbors import KNeighborsClassifier
-import math
+from sklearn.preprocessing import Imputer
 
-#data.classification()
+# Adição das classes mediante o volume de vendas
+data.classification()
 
-train = h.get_data('./files/output/classification.data.csv')
-test = h.get_data('./files/output/test.csv')
-train = train.drop(columns=['Weekly_Sales'])
-test = test.drop(columns=['Weekly_Sales'])
+# Criação de data frames a partir de ficheiros csv
+train = h.get_data('../files/output/classification.data.csv')
+test = h.get_data('../files/output/test.csv')
 
-# The columns that we will be making predictions with.
+# Definição das colunas a utilizar para efeitos de previsão
 x_columns = ['Store', 'Dept', 'week_number', 'IsHoliday', 'Type',
              'Size', 'Temperature', 'Fuel_Price', 'CPI', 'Unemployment']
 
-# The column that we want to predict.
+# Definicão da coluna que se pretende prever
 y_column = ["class"]
 
-# Create the knn model. Look at the sqrt(len(test)) closest neighbor
-knn = KNeighborsClassifier(n_neighbors=int(math.sqrt(len(test))))
+# Troca os valores nulos que interromperiam o modelo, pela média
+# Esta estratégia foi adotada devido ao facto de se tratar das colunas Unemployment e CPI
+imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
+imp = imp.fit(test[x_columns])
+X_test_imp = imp.transform(test[x_columns])
 
-# Fit the model on the training data.
+# Criação do modelo com o número de vizinhos calculado
+# no ficheiro de treino (training/knn.classification.py)
+knn = KNeighborsClassifier(n_neighbors=8)
+
+# Preenchimento do modelo com o data frame de treino
 knn.fit(train[x_columns], train[y_column].values.ravel())
 
-# Make point predictions on the test set using the fit model.
-predictions = knn.predict(test[x_columns])
+# Obtenção das previsões de acordo com dados de teste
+predictions = knn.predict(X_test_imp)
 
-# Add predictions of Weekly_Sales to the test set
+# Adição dos resultados ao data frame de teste, coluna 'class'
 test['class'] = predictions
 
-print(test['class'].value_counts())
-# Export to *.csv
-test.to_csv('./files/output/classification.predictions.csv')
+# Exportação do data frame de teste para um ficheiro csv
+test.to_csv('../files/output/knn.classification.predictions.csv')
+

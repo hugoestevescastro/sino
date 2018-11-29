@@ -1,33 +1,41 @@
 from sklearn.neighbors import KNeighborsRegressor
+from sklearn.preprocessing import Imputer
 import helper as h
 import data
-import math
 
-# Preparing the data
-# data.treatment()
+# Preparação dos dados
+data.treatment()
 
-# Get train and test set
-train = h.get_data('./files/output/regression.data.csv')
-test = h.get_data('./files/output/test.csv')
+# Criação de data frames a partir de ficheiros csv
+train = h.get_data('../files/output/regression.data.csv')
+test = h.get_data('../files/output/test.csv')
 
-# The columns that we will be making predictions with.
+# Definição das colunas a utilizar para efeitos de previsão
 x_columns = ['Store', 'Dept', 'week_number', 'IsHoliday', 'Type',
              'Size', 'Temperature', 'Fuel_Price', 'CPI', 'Unemployment']
 
-# The column that we want to predict.
+# Definicão da coluna que se pretende prever
 y_column = ["Weekly_Sales"]
 
-# Create the knn model. Look at the sqrt(len(test)) closest neighbor
-knn = KNeighborsRegressor(n_neighbors=int(math.sqrt(len(test))))
+# Troca os valores nulos que interromperiam o modelo, pela média
+# Esta estratégia foi adotada devido ao facto de se tratar das colunas Unemployment e CPI
+imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
+imp = imp.fit(test[x_columns])
+X_test_imp = imp.transform(test[x_columns])
 
-# Fit the model on the training data.
+# Criação do modelo com o número de vizinhos calculado
+# no ficheiro de treino (training/knn.regression.py)
+knn = KNeighborsRegressor(n_neighbors=8)
+
+# Preenchimento do modelo com o data frame de treino
 knn.fit(train[x_columns], train[y_column])
 
-# Make point predictions on the test set using the fit model.
-predictions = knn.predict(test[x_columns])
+# Obtenção das previsões de acordo com dados de teste
+predictions = knn.predict(X_test_imp)
 
-# Add predictions of Weekly_Sales to the test set
+# Adição dos resultados ao data frame de teste, coluna 'class'
 test['Weekly_Sales'] = predictions
 
-# Export to *.csv
-test.to_csv('./files/output/regression.predictions.csv')
+# Exportação do data frame de teste para um ficheiro csv
+test.to_csv('../files/output/knn.regression.predictions.csv')
+

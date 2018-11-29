@@ -2,46 +2,41 @@ import data
 import helper as h
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-from sklearn.externals.six import StringIO
-from IPython.display import Image
+from sklearn.metrics import classification_report, confusion_matrix, \
+    accuracy_score, recall_score, precision_score, f1_score
 from sklearn.tree import export_graphviz
-import pydotplus
 
 #data.classification()
 
 df = h.get_data('../files/output/classification.data.csv')
 
-X = df.drop(columns=['class'])
+X = df.drop(columns=['class', 'Unnamed: 0', 'Dept'])
 y = df['class'].values
 
-# Split dataset into train and test data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 100)
+# Utilização de um módulo da sklearn para dividir o
+# data frame train, em train e test, por forma a avaliar a accuracy
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 100)
 
+# Criação do modelo de classificação, Decision tree
 classifier = DecisionTreeClassifier()
+
+# Preenchimento do modelo com o data frame de treino
 classifier.fit(X_train, y_train)
+
+# Obtenção das previsões de acordo com dados de teste
 y_pred = classifier.predict(X_test)
 
+# Apresentação da confusion_matrix
 print(confusion_matrix(y_test, y_pred))
+
+# Apresentação do classification report
 print(classification_report(y_test, y_pred))
-print(accuracy_score(y_test, y_pred))
 
-print("finished")
-classe_names = str(classifier.classes_)
-cols = X.columns
-export_graphviz(classifier, out_file='../files/output/decisiontree.dot', feature_names=cols)
+# Apresentação das métricas de performance do modelo
+print("accuracy_score: " + str(accuracy_score(y_test, y_pred) * 100) + "%")
+print("recall_score: " + str(recall_score(y_test, y_pred, average='micro') * 100) + "%")
+print("precision_score: " + str(precision_score(y_test, y_pred, average='micro') * 100) + "%")
+print("f1_score: " + str(f1_score(y_test, y_pred, average='micro') * 100) + "%")
 
-
-#print(feature_names)
-#export_graphviz(classifier, out_file='tree.dot', feature_names=cols, class_names=classe_names)
-print("1")
-
-#dot_data = StringIO()
-#print("2")
-#export_graphviz(classifier, out_file=dot_data,filled=True, rounded=True, special_characters=True, featurenames=predictor)
-#print("3")
-#graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
-#print("4")
-#Image(graph.create_png())
-#print("5")
-
+# Criação do ficheiro .dot para gerar gráficos
+export_graphviz(classifier, out_file='../files/output/decisiontree.classification.dot', feature_names=X.columns)
