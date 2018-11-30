@@ -25,7 +25,7 @@ X_test_imp = imp.transform(test[x_columns])
 
 # Criação do modelo com o número de vizinhos calculado
 # no ficheiro de treino (training/knn.regression.py)
-knn = KNeighborsRegressor(n_neighbors=8)
+knn = KNeighborsRegressor(n_neighbors=7)
 
 # Preenchimento do modelo com o data frame de treino
 knn.fit(train[x_columns], train[y_column])

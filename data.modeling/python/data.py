@@ -2,7 +2,7 @@ import helper as h
 import numpy as np
 
 
-def treatment(path_to='./files/input/'):
+def treatment(path_to='../files/input/'):
     # Criação de data frames através de ficheiros csv
     _train = h.get_data(path_to + 'train.csv')
     _features = h.get_data(path_to + 'features.csv')
@@ -57,14 +57,14 @@ def treatment(path_to='./files/input/'):
     _test = _test.replace('', np.nan)
 
     # Exportação dos data frames para ficheiros .csv
-    _data.to_csv('./files/output/regression.data.csv')
-    _test.to_csv('./files/output/test.csv')
+    _data.to_csv('../files/output/regression.data.csv')
+    _test.to_csv('../files/output/test.csv')
 
 
 def classification(path_to='./files/output/'):
 
     # Tratamento dos data sets fornecidos
-    treatment()
+    treatment(path_to)
 
     # Importação do data set
     _continuous = h.get_data(path_to + 'regression.data.csv')
@@ -92,4 +92,4 @@ def classification(path_to='./files/output/'):
     _continuous = _continuous.drop(columns=['Weekly_Sales'])
 
     # Exportação dos data frames para ficheiros .csv
-    _continuous.to_csv('./files/output/classification.data.csv')
+    _continuous.to_csv('../files/output/classification.data.csv')

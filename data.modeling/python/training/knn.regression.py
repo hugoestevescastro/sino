@@ -6,7 +6,7 @@ from math import sqrt
 import data
 
 # Preparação dos dados
-#data.treatment()
+data.treatment('../files/input/')
 
 # Criação de data frames a partir de ficheiros csv
 train = h.get_data('../files/output/regression.data.csv')
@@ -14,7 +14,7 @@ train = h.get_data('../files/output/regression.data.csv')
 # Criação de data frame com base no data frame train,
 # sem a coluna 'Weekly_Sales', visto que é o valor que
 # se pretende prever
-X = train.drop(columns=['Weekly_Sales'])
+X = train.drop(columns=['Weekly_Sales', 'Unnamed: 0', 'IsHoliday'])
 
 # Criação de uma lista com os valores da coluna que se
 # pretende prever
@@ -22,12 +22,12 @@ y = train["Weekly_Sales"].values
 
 # Utilização de um módulo da sklearn para dividir o
 # data frame train, em train e test, por forma a avaliar a accuracy
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 # Obtenção do melhor valor de K
 acc_arr = []
 predict_arr = []
-for K_value in range(2, 10):
+for K_value in range(7, 8):
     # Criação do modelo com K_value vizinhos
     knn = KNeighborsRegressor(n_neighbors=K_value)
 
@@ -38,9 +38,9 @@ for K_value in range(2, 10):
     predictions = knn.predict(X_test)
 
     # Cálculo da accuracy do modelo com K_value vizinhos
-    mse = mean_squared_error(y_train, predictions, multioutput='uniform_average')
+    mse = mean_squared_error(y_test, predictions, multioutput='uniform_average')
     rmse = sqrt(mse)
-    mae = mean_absolute_error(y_train, predictions, multioutput='uniform_average')
+    mae = mean_absolute_error(y_test, predictions, multioutput='uniform_average')
     print('******* K = ' + str(K_value) + ' **********')
     print("Mean squared error: ", mse)
     print("Root mean squared error: ", rmse)

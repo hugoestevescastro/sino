@@ -5,7 +5,7 @@ from sklearn.metrics import classification_report, confusion_matrix, \
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 # Adição das classes mediante o volume de vendas
-#data.classification()
+data.classification('../files/input/')
 
 # Criação do data frame a partir do ficheiro csv
 df = h.get_data('../files/output/classification.data.csv')

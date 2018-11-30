@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, confusion_matrix, \
     accuracy_score, recall_score, precision_score, f1_score
 from sklearn.tree import export_graphviz
 
-#data.classification()
+data.classification('../files/input/')
 
 df = h.get_data('../files/output/classification.data.csv')
 
